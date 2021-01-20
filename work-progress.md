@@ -81,6 +81,8 @@
 		                          av_opt_set(oCodecCtx->priv_data, "tune", "zero-latency", 0);
                             [min_dur: min_dur: 0ms; max_dur: 331ms; ave_dur: 79ms] -> [min_dur: 0ms; max_dur: 94ms; ave_dur: 23ms]
                          3. 研究了一下ffmpeg-GPU编码的代码，上面的性能满足要求了，就没有去测试，后面有时间测试一下
+
+1.19 - 1.19(周二) : 从libdash分离出sampleplayer(去掉QT的qtsampleplayer)
 */
 ```
 
