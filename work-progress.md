@@ -82,7 +82,11 @@
                             [min_dur: min_dur: 0ms; max_dur: 331ms; ave_dur: 79ms] -> [min_dur: 0ms; max_dur: 94ms; ave_dur: 23ms]
                          3. 研究了一下ffmpeg-GPU编码的代码，上面的性能满足要求了，就没有去测试，后面有时间测试一下
 
-1.19 - 1.21(周二) : 从libdash分离出sampleplayer(去掉QT的qtsampleplayer)，编译更新libdash需要的库以及libdash库
+1.19 - 1.19(周二) : 从libdash分离出sampleplayer(去掉QT的qtsampleplayer)
+
+1.20 - 1.21(周三、周四) : 编译完成64位新版本libdash库以及libdash需要的64位新版本库(libiconv-1.16/zlib-1.2.11/libxml2-2.9.10/curl-7.74.0)
+
+1.22 - 1.22(周五) : 构建64位新版libdash-networkpart-test工程
 */
 ```
 
