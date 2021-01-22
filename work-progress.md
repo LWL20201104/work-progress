@@ -68,19 +68,7 @@
 
 ```cpp
 /*
-1.17 - 1.18(周日，周一) : 1. 优化视频拼接算法ffmpeg-filter -> memcpy (** 硬件CPUi5-9400F **)
-                            24个Tile拼接一帧，耗时从[90-110]ms -> [2-6]ms 
-                         2. 修改了一下编码器参数提高编码器性能 (** 硬件CPUi5-9400F **)
-                            1920*1080 YUV420p * 1567frame -> h264
-                            param: av_opt_set(oCodecCtx->priv_data, "preset", "superfast", 0); 
-                                   av_opt_set(oCodecCtx->priv_data, "tune", "zerolatency", 0); 
-                            [min_dur: 0ms; max_dur: 196ms; ave_dur: 17ms] -> [min_dur: 0ms; max_dur: 29ms; ave_dur: 4ms]
-                            1920*1080 YUV420p * 1567frame -> h265
-                            param: av_opt_set(oCodecCtx->priv_data, "x265-params", "qp=20", 0);
-		                          av_opt_set(oCodecCtx->priv_data, "preset", "ultrafast", 0);
-		                          av_opt_set(oCodecCtx->priv_data, "tune", "zero-latency", 0);
-                            [min_dur: min_dur: 0ms; max_dur: 331ms; ave_dur: 79ms] -> [min_dur: 0ms; max_dur: 94ms; ave_dur: 23ms]
-                         3. 研究了一下ffmpeg-GPU编码的代码，上面的性能满足要求了，就没有去测试，后面有时间测试一下
+1.17 - 1.18(周日，周一) : 优化视频拼接算法ffmpeg-filter -> memcpy 24个Tile拼接一帧，耗时从[90-110]ms -> [2-6]ms；修改了一下编码器参数提高编码器性能1920*1080 YUV420p * 1567frame -> h264[min_dur: 0ms; max_dur: 196ms; ave_dur: 17ms] -> [min_dur: 0ms; max_dur: 29ms; ave_dur: 4ms]；1920*1080 YUV420p * 1567frame -> h265[min_dur: min_dur: 0ms; max_dur: 331ms; ave_dur: 79ms] -> [min_dur: 0ms; max_dur: 94ms; ave_dur: 23ms]；研究了一下ffmpeg-GPU编码的代码，上面的性能满足要求了，就没有去测试，后面有时间测试一下
 
 1.19 - 1.19(周二) : 从libdash分离出sampleplayer(去掉QT的qtsampleplayer)
 
