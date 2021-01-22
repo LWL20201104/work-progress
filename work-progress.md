@@ -84,9 +84,9 @@
 
 1.19 - 1.19(周二) : 从libdash分离出sampleplayer(去掉QT的qtsampleplayer)
 
-1.20 - 1.21(周三、周四) : 编译完成64位新版本libdash库以及libdash需要的64位新版本库(libiconv-1.16/zlib-1.2.11/libxml2-2.9.10/curl-7.74.0)
+1.20 - 1.21(周三、周四) : 编译完成64位新版本libdash库以及libdash需要的64位新版本库(libiconv-1.16/zlib-1.2.11/libxml2-2.9.10/curl-7.74.0)，并整理详细过程
 
-1.22 - 1.22(周五) : 构建64位新版libdash-networkpart-test工程
+1.22 - 1.22(周五) : 构建64位新版libdash-networkpart-test工程，并整理详细过程
 */
 ```
 
